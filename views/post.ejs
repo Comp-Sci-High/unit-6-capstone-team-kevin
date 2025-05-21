@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Education Matters</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pagetwo.css" />
 </head>
 <body>
   <header>
@@ -14,27 +14,19 @@
 
   <main class="post-grid">
     <!-- Example Card -->
+     <% for (let i = 0;i < posts.length;i++){ %>
     <div class="post-card">
-      <div class="age-tag">Ages 10–14</div>
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/88/DuckDuckGo_logo.svg/1200px-DuckDuckGo_logo.svg.png" />
+      <div class="<%=posts[i].agerange"></div>
+      <img src="<%= posts[i].img%>"/>
       <div class="post-content">
-        <h2>After-School Tutoring Program</h2>
-        <p>This program offers free tutoring to middle schoolers in the Bronx to help boost literacy and math scores.</p>
-        <a href="https://example.com" target="_blank">Learn more</a>
+        <h2><%= posts[i].title%></h2>
+        <p><%=posts[i].description%></p>
+        <a href="https://example.com" target="_blank"><%=posts[i].link%></a>
       </div>
+     <% } %>
     </div>
 
-    <!-- Add more post-cards below this one -->
-    <!-- Example 2 -->
-    <div class="post-card">
-      <div class="age-tag">Ages 15–18</div>
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/88/DuckDuckGo_logo.svg/1200px-DuckDuckGo_logo.svg.png" alt="Mentoring image" />
-      <div class="post-content">
-        <h2>Mentorship Program for High School Students</h2>
-        <p>Local college students provide mentorship to high school juniors and seniors preparing for college applications.</p>
-        <a href="https://example.com" target="_blank">Learn more</a>
-      </div>
-    </div>
+
 
   </main>
 </body>
