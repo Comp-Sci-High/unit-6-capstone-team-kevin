@@ -12,12 +12,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static(__dirname+"/public"))
+
 app.set("view engine", "ejs");
 
 app.use(express.json());
 
 const postSchema = new mongoose.Schema({
-  tag:{ type: String},
+  
   link:{type:String},
   img:{type:String},
   description:{type:String},
@@ -29,7 +31,7 @@ const Post = mongoose.model("Post",postSchema,"Posts");
 
 app.post("/add/post",async(req,res)=>{
   const post = await new Post({
-    tag:req.body.tag,
+    
     link:req.body.link,
     img:req.body.img,
     description:req.body.description,
