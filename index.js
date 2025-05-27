@@ -31,7 +31,7 @@ const Post = mongoose.model("Post",postSchema,"Posts");
 
 app.post("/add/post",async(req,res)=>{
   const post = await new Post({
-    title:req.body.type,
+    title:req.body.title,
     link:req.body.link,
     img:req.body.img,
     description:req.body.description,
@@ -41,7 +41,7 @@ app.post("/add/post",async(req,res)=>{
     res.json(Post)
 })
 
-app.get("/",async(req,res)=>{
+app.get("/post",async(req,res)=>{
    const posts = await Post.find({})
    res.render("post.ejs",{posts})
 })

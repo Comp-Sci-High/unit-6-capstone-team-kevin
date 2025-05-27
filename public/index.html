@@ -1,32 +1,44 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Education Matters</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
 </head>
 <body>
-  <header>
-    <h1>Education Matters</h1>
-    <p>Raising awareness about educational inequality in under-resourced communities.</p>
+  <!-- Navbar -->
+ <nav class="navbar">
+  <div class="navbar-container">
+    <div class="nav-title">Education Matters</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/post">Posts</a></li>
+      <li><a href="inde.html">Make a Post</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Why Education Matters</h1>
+    <p>Education is more than just learning—it’s a powerful pathway to opportunity. In neighborhoods affected by poverty, where
+      resources are often limited and futures uncertain, access to quality education can be life-changing.</p>
+    <p>It empowers children and teens with the tools to understand the world, to shape their futures, and to break generational
+      cycles of hardship. Without fair access to education, countless young minds full of potential are overlooked.</p>
+    <p>Our mission is to amplify awareness and drive action. When we uplift education in these communities, we’re not just investing
+      in individuals—we’re investing in stronger families, empowered neighborhoods, and a more just society.</p>
   </header>
 
-  <section class="post-form">
-    <h2>Share Your Post</h2>
-    <form id="postForm">
-      <input type="text" placeholder="Title" required />
-      <input type="url" placeholder="Source Link" required />
-      <input type="text" placeholder="Neighborhood" required />
-      <input type="text" placeholder="Age Range (e.g. 10-14)" required />
-      <textarea placeholder="Description" required></textarea>
-      <input type="url" placeholder="Image URL" required />
-      <button type="submit">Submit Post</button>
-    </form>
-  </section>
-
-  <section class="posts" id="postsContainer">
-    <h2>Community Posts</h2>
-    <!-- Posts will appear here -->
+  <!-- Carousel Section -->
+  <section class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-slide">[ Add image 1 here ]</div>
+      <div class="carousel-slide">[ Add image 2 here ]</div>
+      <div class="carousel-slide">[ Add image 3 here ]</div>
+    </div>
   </section>
 </body>
+</html>

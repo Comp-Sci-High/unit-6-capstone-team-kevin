@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="pagetwo.css" />
 </head>
 <body>
+   <nav class="navbar">
+  <div class="navbar-container">
+    <div class="nav-title">Education Matters</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/post">Posts</a></li>
+      <li><a href="inde.html">Make a Post</a></li>
+    </ul>
+  </div>
+</nav>
   <header>
     <h1>Education Matters</h1>
     <p>Shining a light on the importance of education in underserved neighborhoods.</p>
@@ -16,13 +26,16 @@
     <!-- Example Card -->
      <% for (let i = 0;i < posts.length;i++){ %>
     <div class="post-card">
-      <div class="<%=posts[i].agerange"></div>
+      <div class="age-tag"><%=posts[i].agerange%></div>
       <img src="<%= posts[i].img%>"/>
       <div class="post-content">
+        <div class="neighborhood-tag"><%=posts[i].neighborhood%></div>
         <h2><%= posts[i].title%></h2>
         <p><%=posts[i].description%></p>
-        <a href="https://example.com" target="_blank"><%=posts[i].link%></a>
+        <a href="https://example.com" target="<%=posts[i].link%>">Learn More</a>
       </div>
+      
+         </div>
      <% } %>
     </div>
 
