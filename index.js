@@ -53,8 +53,8 @@ app.patch("/update/:_id",async(req,res)=>{
 })
 
 app.delete("/delete/:_id",async(req,res)=>{
-  const gone = await Post.findOneAndUpdate({
-
+  const gone = await Post.findOneAndDelete({
+   _id:req.params._id
   })
 })
 async function startServer(){

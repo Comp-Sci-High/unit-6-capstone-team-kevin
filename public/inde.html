@@ -25,12 +25,12 @@
   <section class="post-form">
     <h2>Share Your Post</h2>
     <form id="postForm">
-      <input type="text" placeholder="Title" required />
-      <input type="url" placeholder="Source Link" required />
-      <input type="text" placeholder="Neighborhood" required />
-      <input type="text" placeholder="Age Range (e.g. 10-14)" required />
-      <textarea placeholder="Description" required></textarea>
-      <input type="url" placeholder="Image URL" required />
+      <input type="text"name="title" placeholder="Title" required />
+      <input type="url" name="link"placeholder="Source Link" required />
+      <input type="text" name="neighborhood" placeholder="Neighborhood" required />
+      <input type="text" name="agerange"placeholder="Age Range (e.g. 10-14)" required />
+      <textarea placeholder="Description"name="description" required></textarea>
+      <input type="url" name="image"placeholder="Image URL" required />
       <button type="submit">Submit Post</button>
     </form>
   </section>
@@ -39,4 +39,5 @@
     <h2>Community Posts</h2>
     <!-- Posts will appear here -->
   </section>
+  <script src="post.js"></script>
 </body>

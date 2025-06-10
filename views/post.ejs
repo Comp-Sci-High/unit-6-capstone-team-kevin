@@ -35,6 +35,8 @@
         <a href="https://example.com" target="<%=posts[i].link%>">Learn More</a>
       </div>
       
+   <button onclick="deletePost('<%= posts[i]._id %>')">Delete</button>
+
          </div>
      <% } %>
     </div>
@@ -42,5 +44,7 @@
 
 
   </main>
+  <script src="/admin.js"></script>
+  
 </body>
 </html>
